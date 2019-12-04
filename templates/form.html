@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+  <h1 class="jumbotron">
+    Welcome to Form Page
+  </h1>
+
+  <div class="container">
+    <form method="POST">
+      {% csrf_token %}
+      <label for="Firstname"> <strong>FIRSTNAME</strong> :
+        <input type="text" name="firstname" id="fname">
+        <input class="btn btn-primary" type="submit" value="Submit">
+      </label>
+    </form>
+  </div>
+{% endblock body_block %}
